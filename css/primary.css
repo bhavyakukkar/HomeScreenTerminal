@@ -1,0 +1,29 @@
+main {
+    height: calc(100vh - 4em);
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+#stdout {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+#stdin {
+    height: 2em;
+    margin-top: 1em;
+}
+#stdin input {
+    color: var(--text-stdin);
+    width: 0em;
+    padding-right: 0em;
+    border-right: solid 7px var(--text-cursor);
+}
+
+article {
+    color: var(--text-primary);
+}

@@ -1,0 +1,20 @@
+:root {
+    --bg-primary: #020202;
+
+    --text-primary: #00FF41;
+    --text-seconary: #008F11;
+    --text-stdin: #EEBBEE;
+    --text-cursor: #555555;
+}
+
+html {
+    all: unset;
+    font-family: monospace;
+    cursor: crosshair;
+}
+
+body {
+    margin: 0;
+    background-color: var(--bg-primary);
+    padding: 2em;
+}

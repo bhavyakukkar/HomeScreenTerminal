@@ -1,0 +1,2 @@
+- cursor at end of stdin input
+- if stdin begin with 'hello', reply sample from 'hey', 'hello', 'hiya', etc.
