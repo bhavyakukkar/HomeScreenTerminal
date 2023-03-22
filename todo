@@ -1,7 +1,7 @@
 # current 
-- if stdin begin with 'hello', reply sample from 'hey', 'hello', 'hiya', etc.
-- process stdin mechanism
-- project grammar (> info, ? prompt, ! error, etc.)
+- figure out scrolling
+- write more essential programs
+- decide whether to use args as used in bash
 
 # delayed
 - moving color gradient by manipulating :root
