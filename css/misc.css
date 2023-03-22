@@ -4,3 +4,8 @@ input {
     caret-color: transparent;
     font-size: monospace;
 }
+
+/* support for custom payload-type images */
+#stdout span img {
+    width: 0.5em;
+}

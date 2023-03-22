@@ -12,6 +12,18 @@ main {
     flex-direction: column;
     justify-content: end;
 }
+article {
+    display: flex;
+    justify-content: start;
+}
+article span {
+    opacity: 0.7;
+    width: 0.5em;
+    margin-right: 0.5em;
+}
+#stdout article.query { color: var(--text-secondary); margin-top: 1em; }
+#stdout article.info { color: var(--text-primary); }
+#stdout article.error { color: var(--text-error); }
 
 #stdin {
     height: 2em;
@@ -23,7 +35,4 @@ main {
     padding-right: 0em;
     border-right: solid 7px var(--text-cursor);
 }
-
-article {
-    color: var(--text-primary);
-}
+#stdin article { color: var(--text-stdin); }
