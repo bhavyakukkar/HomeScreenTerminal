@@ -1,7 +1,9 @@
 # current 
-- figure out scrolling
-- write more essential programs
-- decide whether to use args as used in bash
+- if user calls start, new #stdin auto-focus interval is called
+- implement history as global array of commands
+- up arrow key should copy last query
 
 # delayed
 - moving color gradient by manipulating :root
+- figure out scrolling
+- decide whether to use args as used in bash
