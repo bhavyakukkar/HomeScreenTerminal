@@ -1,19 +1,4 @@
-const programs = {
-    start: function(args) {
-        clearStdout()
-        return {
-            content: 'Logged into home terminal...',
-            type: '#'
-        }
-    },
-
-    hey: function(args) {
-        if(args.join(' ') == "u suck")
-            return 'and u swallow'
-        return 'hiya'
-    }
-}
-
+import programs from "./programs/index.js"
 
 export function processor(program, args) {
     return new Promise((resolve, reject) => {
