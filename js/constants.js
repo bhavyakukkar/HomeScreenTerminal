@@ -1,1 +1,1 @@
-const CHARACTER_WIDTH = 7.14767
+export const CHARACTER_WIDTH = 7.14767
