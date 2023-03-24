@@ -1,20 +1,21 @@
-function main() {
-    document.querySelector("#stdin input").addEventListener('input', e => updateWidth(e.target))
-    setInterval(() => document.querySelector("#stdin input").focus(), 100)
-}
+import { CHARACTER_WIDTH } from './constants.js'
 
-function updateWidth(element) {
+export function updateWidth(element) {
     let newWidth = (element.value.length)*CHARACTER_WIDTH
     element.style.width = newWidth + "px"
 }
 
-function clearStdin() {
-    document.querySelector("#stdin input").value = ""
+export function setStdin(query) {
+    document.querySelector("#stdin input").value = query
     updateWidth(document.querySelector("#stdin input"))
 }
 
-function clearStdout() {
+export function clearStdout() {
     document.querySelector("#stdout").innerHTML = ""
 }
 
-(document.readyState !== 'loading') ? main() : document.addEventListener('DOMContentLoaded', main)
+export function lastExecutedOutput(query) {
+    //todo
+    /*const stdout = document.querySelector("#stdout")
+    return stdout.childNodes[stdout.childNodes.length - 1].childNodes[1].value*/
+}
