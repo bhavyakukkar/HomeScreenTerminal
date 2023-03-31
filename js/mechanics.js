@@ -5,6 +5,8 @@ const QUERY = 0
 const INFO = 1
 const ERROR = 2
 
+let programInExec = false
+
 
 function main() {
     makeInput()
@@ -22,16 +24,25 @@ function makeInput() {
     })
 }
 
-function parseInput(input, keyWithCtrl = null) {
-    output({content: input}, QUERY)
+export function parseInput(input, keyWithCtrl = null) {
+    output({content: input}, QUERY, programInExec == false)
     if(!keyWithCtrl)
-        processor(input.split(" ")[0], input.split(" ").slice(1,))
-            .then(result => result && output(result, INFO))
-            .catch(result => result && output(result, ERROR))
+        processor(
+            !programInExec ? input.split(" ")[0] : programInExec,
+            !programInExec ? input.split(" ").slice(1,) : input.split(" ")
+        )
+            .then(result => {
+                if(result.content == false)
+                    return
+                let temp = programInExec
+                programInExec = !result.done ? input.split(" ")[0] : false
+                output(result, INFO, result.done && temp == false)
+            })
+            .catch(result => result && output(result, ERROR, {done: true}))
     setStdin("")
 }
 
-function output(payload, type) {
+function output(payload, type, done) {
     const typeContainer = document.createElement('span')
     typeContainer.innerHTML = payload.type ? payload.type : ((type === 0) ? '?' : (type === 1) ? '>' : '!')
 
@@ -39,7 +50,10 @@ function output(payload, type) {
     contentContainer.innerHTML = payload.content.replaceAll("\n", "<br>")
 
     const element = document.createElement('article')
+    
     element.className = (type === 0) ? 'query' : (type === 1) ? 'info' : 'error'
+    !done && (element.className += ' incomplete')
+
     element.appendChild(typeContainer)
     element.appendChild(contentContainer)
     document.querySelector("#stdout").appendChild(element)

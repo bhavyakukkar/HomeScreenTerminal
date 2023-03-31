@@ -6,6 +6,7 @@ import setbg from './system/setbg.js'
 
 //USER PROGRAMS
 import hey from './user/hey.js'
+import greeting from './user/greeting.js'
 
 const programs = {
     //SYSTEM PROGRAMS
@@ -15,6 +16,7 @@ const programs = {
     setbg,
 
     //USER PROGRAMS
-    hey
+    hey,
+    greeting
 }
 export default programs

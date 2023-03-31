@@ -6,6 +6,7 @@ export default function() {
     clearStdout()
     return {
         content: 'Logged into home terminal...',
-        type: '#'
+        type: '#',
+        done: true
     }
 }
