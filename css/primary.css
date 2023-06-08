@@ -1,5 +1,5 @@
 main {
-    height: calc(100vh - 2em);
+    height: calc(100vh - 4em);
     display: flex;
     flex-direction: column;
     justify-content: end;
@@ -27,6 +27,7 @@ article span {
 #stdout article.query.incomplete { padding-top: 1em; margin-top: 0em; }
 #stdout article.info { color: var(--text-primary); }
 #stdout article.error { color: var(--text-error); }
+#stdout article td { padding: 0 1em 0 0; }
 
 #stdin {
     height: 2em;

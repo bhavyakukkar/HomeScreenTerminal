@@ -1,9 +1,32 @@
-# current 
-- if user calls start, new #stdin auto-focus interval is called
-- implement history as global array of commands
-- up arrow key should copy last query
+# tomorrow
+- node-ify app so that easy to import argsPosix and argsUsagex (oops the x after argsUsage is a mistake, or is it?)
+- study utility.js/verifyArgsWithUsageArr and figure out if worth keeping
+- make args.js/parsePosix 
+- routeArgs creates temp array of found named-keys while deleting them during checking mode, adds them back if check unsuccessful. optional then only searches remaining keys
+- validateUsage returns array [[mode, short], [mode2, null], ...] to make easier to route named args
+- instead of tedious js to figure out styling of multiline commands, use css with ids
+- abstraction between program from command line and program internally
+- consider naming hard keys (modal, optional, positional, named, accept, etc) with an underscore
+- program once imported internally gets added attribute 'verified'. unverified programs exit with message, never reach routeArgs
+- system program that formats usage to create help menu
+- **consider:** rename mechanics.js to environment.js
 
-# delayed
-- moving color gradient by manipulating :root
+# later
 - figure out scrolling
-- decide whether to use args as used in bash
+- system program to debug that can output argsParsed to program for use-case
+- indication for multiline i/o where command prefix programInExec appears in stdin output[1] with some animation
+- input having 0 spaces is an error, must have one separating program from arguments
+- setbg: find way to see if image url is valid
+- include special optional flag to disable parsing usage and also to disable parsing posix. implement in mechanics.js/parseInput
+- atm if user calls start, new #stdin auto-focus interval is called ignoring older one
+- fancy formatted print function
+- printhelp uses dotfile for help menu format
+- changes to programs should change single static file like json, imported by programs/index.js
+- done: false block should collapse after finishing
+- history is more compact with info like command successful, called by user or by other program, etc
+- when program is not done, indication next to stdin as well
+- consider naming each error with a code (referring to errors in program usage object but generally as well)
+- moving color gradient by manipulating :root
+- each call to start should create new session with new history
+- option for user to change argument style (-d-2 instead of -d:2)
+- if history exceeds certain size, log after start program

@@ -4,8 +4,7 @@
 
 export default function(name, args) {
     let responses = ['hiya', 'hello there', 'howdy', 'uwu', 'how are you today']
-
-    if(args.join(' ') == "you suck")
+    if(args._main.join(" ") == "you suck")
         //'\n' to break result into multiple lines
         return 'and\nyou\nswallow'
     

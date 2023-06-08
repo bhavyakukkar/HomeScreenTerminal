@@ -1,9 +1,9 @@
 :root {
     --bg-primary: #020202;
 
-    --text-primary: #00FF41;
-    --text-secondary: #22ffe1;
-    --text-error: #FF2233;
+    --text-primary: #6afe48;
+    --text-secondary: #c1edcc;
+    --text-error: #e83626;
     --text-stdin: #EEBBEE;
     --text-cursor: #777777;
 }
@@ -17,7 +17,7 @@ html {
 body {
     margin: 0;
     background-color: var(--bg-primary);
-    padding: 1em;
+    padding: 2em 1em;
 }
 
 p {

@@ -1,0 +1,20 @@
+{
+  "name": "homescreenterminal",
+  "version": "1.0.0",
+  "description": "A terminal in the form of a web-application",
+  "private": true,
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bhavyakukkar/HomeScreenTerminal.git"
+  },
+  "author": "Bhavya Kukkar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bhavyakukkar/HomeScreenTerminal/issues"
+  },
+  "homepage": "https://github.com/bhavyakukkar/HomeScreenTerminal#readme"
+}
